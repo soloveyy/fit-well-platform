@@ -5,8 +5,6 @@ import OTPVerificationModal from "@/components/OTPVerificationModal";
 
 export default function Home({ searchParams }: SearchParamProps) {
   const isAdmin = searchParams.admin === "true";
-    const isDev = process.env.NODE_ENV === 'development';
-    const basePath = isDev ? '/fitwell' : '';
 
   return (
     <div className="flex h-screen max-h-screen">
@@ -34,7 +32,7 @@ export default function Home({ searchParams }: SearchParamProps) {
             </div>
         </section>
         <Image
-            src={`${basePath}/assets/images/kettlebell-gym-equipment-still-life.jpg`}
+            src="/assets/images/kettlebell-gym-equipment-still-life.jpg"
             width={1000}
             height={1000}
             alt="test alt"
