@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
-const isDev = process.env.NODE_ENV === 'development';
-
-
 const nextConfig = {
-    basePath: isDev? '' : '/fitwell',
+    basePath: process.env.NEXT_PUBLIC_BASE_PATH || ''
 };
 
 export default nextConfig;
